@@ -1,4 +1,4 @@
-package org.filatov.springforest.ws.server.endpoint.mapping;
+package org.filatov.springforest.ws.service.endpoint.mapping;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

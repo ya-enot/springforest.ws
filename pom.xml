@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.filatov.springforest</groupId>
-	<artifactId>ws.server</artifactId>
+	<artifactId>ws.service</artifactId>
 	<version>1.2.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Springforest WS Server</name>
+	<name>Springforest WS Service</name>
 
 	<properties>
 		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
