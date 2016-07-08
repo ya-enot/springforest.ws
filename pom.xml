@@ -5,7 +5,7 @@
 
 	<groupId>org.filatov.springforest</groupId>
 	<artifactId>ws.service</artifactId>
-	<version>1.2.0-SNAPSHOT</version>
+	<version>1.2.5-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Springforest WS Service</name>
