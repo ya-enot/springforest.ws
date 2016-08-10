@@ -11,6 +11,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.oxm.Marshaller;
+import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.WebServiceMessage;
 import org.springframework.ws.context.MessageContext;
 import org.springframework.ws.server.endpoint.support.PayloadRootUtils;
@@ -20,7 +22,7 @@ public class JaxWsMethodEndpointMapping
 		extends AbstractDiscoveringCachedEndpointMapping<SoapAction, JaxWsMethodEndpoint> {
 
 	private static final String TRIM_CHARS = "\n\t' \"";
-	private static TransformerFactory transformerFactory;
+	private static final TransformerFactory transformerFactory;
 	static {
 		transformerFactory = TransformerFactory.newInstance();
 	}
@@ -33,7 +35,7 @@ public class JaxWsMethodEndpointMapping
 			return new SoapAction(((SoapMessage) message).getSoapAction()
 					.replaceAll("^[" + TRIM_CHARS + "]|[" + TRIM_CHARS + "]$", ""));
 		}
-		return null;
+		throw new RuntimeException("No endpoint found for " + messageContext);
 	}
 
 	@Override
