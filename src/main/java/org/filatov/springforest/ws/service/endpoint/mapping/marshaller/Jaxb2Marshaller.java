@@ -126,7 +126,7 @@ import org.springframework.util.xml.StaxUtils;
  * @see #setUnmarshallerListener(javax.xml.bind.Unmarshaller.Listener)
  * @see #setAdapters(XmlAdapter[])
  */
-public class JaxWsJaxb2Marshaller implements MimeMarshaller, MimeUnmarshaller, GenericMarshaller, GenericUnmarshaller,
+public class Jaxb2Marshaller implements MimeMarshaller, MimeUnmarshaller, GenericMarshaller, GenericUnmarshaller,
 		BeanClassLoaderAware, InitializingBean {
 
 	private static final String CID = "cid:";
